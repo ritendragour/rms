@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMS</title>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    label{
+        font-size: 60px;
+    }
+    button{
+        padding: 10px;
+        width: 20%;
+    }
+</style>
+</head>
+<body>
+    <label>Select Vegetable</label><br>
+    <button onclick="vegi()">Check me</button>
+    <div id='output'></div>
+    <script>
+        let output = document.getElementById('output')
+        function vegi() {
+            const ff = ['sev', 'kathar', 'sev tamatar', 'dal', 'I have no more record']
+            let finalVeg = document.createElement('h1')
+            const date = new Date();
+            let CurrentDate = date.getDate() + "- "+ (date.getMonth()+1)+ "- " + date.getFullYear()
+            finalVeg.innerText = "Please make " +ff[(Math.round(Math.random() * 4))] +" Today\nDate : "+CurrentDate 
+            output.appendChild(finalVeg)
+            setTimeout(function () {
+                window.location.reload();
+            }, 5000);
+        }
+    </script>
+</body>
+
+</html>
