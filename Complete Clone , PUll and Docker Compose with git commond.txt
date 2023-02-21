@@ -1,0 +1,28 @@
+Complete Clone , PUll and Docker Compose with git commond
+
+#git pull (fetch data)
+#git branch(branch check karne ke liye)
+#git fetch(branch fetch only)
+#git all(branch or data dono fetch karta hai)
+#git Checkout -b "BRANCH_NAME"(branch bana ke change karne ke liye)
+#git checkout "BRANCH_NAME" (switch karne ke liye).
+#git status (Status Check karne ke liye)
+#git pull origin/BRANCH_NAME	 
+#git push(push karne ke liye)
+#git merge "master" (main ke merge karne ke liye)
+#cd (folder me jane ke liye)
+#git init "repository name" (repository name)
+
+1.Clone commond -> git clone https://"FIRST_NAME LAST_NAME" HTTPS(our Project https://gitlab.com/click-spurr/cs-erp.git)															
+2.Pull Commond -> 
+					1.Master(Main)  git pull
+					(Not compulsory) git pull origin/BRANCH_NAME
+					2.git checkout OUR_BRANCH_NAME 
+					3.git pull OUR_BRANCH_NAME
+					4.merge master(main) git merge "master(main)"
+					5.git push.
+					# cd folder_name(ex->chs_docker)
+3. Docker Compose -> 
+					1.docker-Compose up 
+					
+					
