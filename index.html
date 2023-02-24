@@ -8,10 +8,11 @@
     <title>RMS</title>
 <style>
     body{
-        background-image: url('https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600');
+        background-image: url('https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -24,6 +25,11 @@
     button{
         padding: 10px;
         width: 20%;
+    }
+    .ans{
+        padding: 25px 50px;
+        background: rgba(2,0,36,0.4);
+        background: linear-gradient(90deg, rgba(2,0,36,0.4) 0% rgba(219,202,206,0.4) 100%, rgba(0,212,255,0.4) 100%);
     }
     @media (max-width:458px) {
         label{
@@ -42,8 +48,13 @@
     <script>
         let output = document.getElementById('output')
         function vegi() {
+            document.querySelector('label').style.display ='none'
+            document.querySelector('button').style.display ='none'
             const ff = ['"Sev"', '"Kathar"', '"Sev Tamatar"', '"Dal"', '"bhindi"','"sukha aalu"', '"soya badi"', '"rayta"', '"today please eat outside"']
+            let ans = document.querySelector('#output')
+            ans.className = 'ans'
             let finalVeg = document.createElement('h1')
+            finalVeg.style.fontSize = '62px'
             const date = new Date();
             let CurrentDate = date.getDate() + "- "+ (date.getMonth()+1)+ "- " + date.getFullYear()
             finalVeg.innerText = "Please make " +ff[(Math.round(Math.random() * ff.length))] +" Today\nDate : "+CurrentDate 
