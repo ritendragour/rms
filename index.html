@@ -42,11 +42,11 @@
     <script>
         let output = document.getElementById('output')
         function vegi() {
-            const ff = ['"Sev"', '"Kathar"', '"Sev Tamatar"', '"Dal"', '"Other"']
+            const ff = ['"Sev"', '"Kathar"', '"Sev Tamatar"', '"Dal"', '"bhindi"','"sukha aalu"', '"soya badi"', '"rayta"', '"today please eat outside"']
             let finalVeg = document.createElement('h1')
             const date = new Date();
             let CurrentDate = date.getDate() + "- "+ (date.getMonth()+1)+ "- " + date.getFullYear()
-            finalVeg.innerText = "Please make " +ff[(Math.round(Math.random() * 4))] +" Today\nDate : "+CurrentDate 
+            finalVeg.innerText = "Please make " +ff[(Math.round(Math.random() * ff.length))] +" Today\nDate : "+CurrentDate 
             output.appendChild(finalVeg)
             setTimeout(function () {
                 window.location.reload();
