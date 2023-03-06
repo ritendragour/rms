@@ -42,6 +42,16 @@
 </style>
 </head>
 <body>
+    <form>
+    <!-- <input type="number" placeholder="Enter total number of member" id="totalMember"> -->
+    <input type="number" placeholder="first member" id="fm">
+    <input type="number" placeholder="second member" id="sm">
+    <input type="number" placeholder="third member" id="tm">
+
+    <!-- <input type="number" placeholder="total amount" id="totalAmount"> -->
+    <input type="submit" value="Check">
+    </form>
+    <div id="men"></div>
     <label>Select Vegetable</label><br>
     <button onclick="vegi()">Check me</button>
     <div id='output'></div>
@@ -63,6 +73,51 @@
                 window.location.reload();
             }, 5000);
         }
+
+        let form = document.querySelector('form')
+        form.addEventListener('submit',submitData)
+        //calculate
+        function submitData(e){ 
+            e.preventDefault()
+            // let totalMember = document.getElementById('totalMember').value
+
+            let fm = document.getElementById('fm').value
+            let sm = document.getElementById('sm').value
+            let tm = document.getElementById('tm').value
+            let totalAmount = parseInt(fm)+ parseInt(sm) + parseInt(tm)
+            let divByThree = totalAmount/3
+
+            // console.log(totalAmount/3)
+            if(divByThree < fm){
+            console.log(" give fm => "+ (fm - divByThree))
+            givenSm = (fm - divByThree) /2
+            givenTm = (fm - divByThree) /2
+            console.log("fm" +givenTm +" sm"+ givenSm)
+        }
+        if(divByThree < sm){
+            console.log("give sm => "+ (sm - divByThree))
+            givenFm = (sm - divByThree) /2
+            givenTm = (sm - divByThree) /2
+            console.log("fm" +givenFm +" sm"+ givenTm)
+        }
+        if(divByThree < tm){
+            console.log("give tm => "+ (tm - divByThree))
+            givenFm = (tm - divByThree) /2
+            givenSm = (tm - divByThree) /2
+            console.log("fm" +givenFm +" sm"+ givenSm)
+
+        }
+            // let totalAmount = document.getElementById('totalAmount').value
+        //     let men = document.getElementById('men') 
+        // for(let i=1 ; i<= totalMember ; i++){
+        //     let members = document.createElement('p')
+        //     members.innerText = "hello"
+        //     men.appendChild('members')
+            
+        // }
+        form.reset()
+    }
+
     </script>
 </body>
 
